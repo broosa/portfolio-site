@@ -1,0 +1,80 @@
+<!doctype HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Byron Roosa</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Inconsolata" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+    //Given the id of a page-content div, as well as the id of the button
+    //that sends it there, this function hides other divs and shows
+    //the one we want to navigate to.
+    var selectContentPage = function(pageID, navbarID) {
+      $("body > .page-content").hide();
+      $(pageID).show();
+      $(".page-navbar > a").removeClass("nav-current");
+      $(navbarID).addClass("nav-current");
+    }
+
+    $(document).ready(function () {
+      console.log("Setting page");
+      if (window.location.hash) {
+        var pageID = window.location.hash.replace(/^#/, "");
+        selectContentPage("#content-" + pageID, "#nav-" + pageID);
+      }
+    });
+
+    window.onhashchange = function () {
+      var pageID = window.location.hash.replace(/^#/, "");
+      selectContentPage("#content-" + pageID, "#nav-" + pageID);
+    };
+
+    </script>
+  </head>
+  <body>
+    <div class="page-header">
+      <div class="page-title">Byron Roosa</div>
+      <div class="page-subtitle">Software Developer</div>
+    </div>
+    <div class="page-navbar">
+      <a href="#about-me" id="nav-about-me" class="nav-current">About Me</a>
+      <a href="#my-work" id="nav-my-work">About My Work</a>
+      <a href="#contact" id="nav-contact">Contact</a>
+    </div>
+    <div class="page-content default-content" id="content-about-me">
+      <p>I'm a full-stack software developer currently studying computer science at Earlham College. My interests include Software Development,
+      Computer/Information Security, and High-Performance Computing.</p>
+      <p> While not at my computer or studying, I enjoy playing music and Ultimate Frisbee.</p>
+      <p><i>Looking to get in touch? Click <a href="#contact">here</a>.</i></p>
+    </div>
+    <div class="page-content" id="content-my-work">
+      <h2>Projects</h2>
+      <p>Several of my projects are available on my github profile. You can take a look at it <a href="https://github.com/broosa/">here</a>.
+      <h2>Technical Skills</h2>
+      <h3>Languages</h3>
+      <p><span class="code-snippet">print("Hello World!") #Python</span></p>
+      <p><span class="code-snippet">printf("Hello World!\n"); //C</span></p>
+      <p><span class="code-snippet">cout << "Hello World!" << endl; //C++<span></p>
+      <p><span class="code-snippet">System.out.println("Hello World!") //Java;</span></p>
+      <p><span class="code-snippet">console.log("Hello World!"); //Javascript/ES6</span></p>
+      <p><span class="code-snippet">&lt;h1&gt;Hello World!&lt;/h1&gt; &lt;!-- HTML --&gt;</span></p>
+      <p><span class="code-snippet">content: "Hello World!"; //CSS</span></p>
+      <p><i>Author's Note: Above code supports theory that anything can (but not necessarily should) be done in CSS. Go figure! Also, this list is not exhaustive.</i></p>
+      <h3>Tools/Frameworks</h3>
+      <p><strong>Web:</strong> Flask (Some), AngularJS, jQuery, Bootstrap</p>
+      <p><strong>HPC:</strong> MPI, OpenMP</p>
+      <p><strong>Other:</strong> Git, SVN, Linux CLI tools</p>
+    </div>
+    <div class="page-content" id="content-contact">
+      <p><strong>Email:</strong> <a href="mailto:byron.roosa@gmail.com">byron.roosa@gmail.com</a></p>
+      <p><strong>Twitter:</strong> <a href="https://twitter.com/byron_roosa">@byron_roosa</a></p>
+      <p><strong>Github:</strong> <a href="https://github.com/broosa">@broosa</a></p>
+      <p><strong>Linkedin:</strong> Click <a href="https://www.linkedin.com/in/byron-roosa-90a0a4aa">here</a></p>
+    </div>
+    <div class="page-footer">
+      Like this website design? <a href="https://github.com/broosa.github.io">View it on GitHub</a><br>
+      &copy;2016 Byron Roosa
+    </div>
+  </body>
+</html>

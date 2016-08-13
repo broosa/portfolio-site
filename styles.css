@@ -1,0 +1,113 @@
+html {
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  background-color: #E0E1DD;
+  font-family: 'Roboto', sans-serif;
+}
+
+body > div {
+  width: 100%;
+  padding-right: 300px;
+  padding-left: 300px;
+}
+
+h1, h2, h3 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+i {
+  font-size: .75em;
+}
+
+span.code-snippet {
+  font-family: 'Inconsolata', sans-serif;
+  background-color: #415A77;
+  color: #C6C7C8;
+  padding: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.page-header, .page-footer {
+  width: 100%;
+  background-color: #1B263B;
+}
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  padding-bottom: 30px;
+}
+
+.page-footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #E0E1DD;
+}
+
+.page-footer a {
+  color: #B6B7B8;
+}
+
+.page-title {
+  font-size: 6em;
+  font-weight: bold;
+  color: #E0E1DD;
+  margin-bottom: 20px;
+}
+
+.page-subtitle {
+  font-size: 3em;
+  color: #B0B0AB;
+}
+
+.page-navbar {
+  display: flex;
+  width: 100%;
+  padding-top: 40px;
+  padding left: 0px;
+  flex-direction: row;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #415A77;
+}
+
+.page-navbar a {
+  font-size: 2em;
+  text-decoration: none;
+  color: #B6B7B8;
+  margin-right: 40px;
+}
+
+.page-navbar a.nav-current {
+  font-weight: bold;
+  color: #D6D7D8;
+}
+
+.page-navbar a:hover {
+  color: #E0E1DD;
+}
+
+.page-content {
+  box-sizing: border-box;
+  flex-grow: 1;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: #0D1B2A;
+  font-size: 1.25em;
+}
+
+.page-content:not(.default-content) {
+  display: none;
+}
