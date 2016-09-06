@@ -41,6 +41,7 @@ span.code-snippet {
 .page-header, .page-footer {
   width: 100%;
   background-color: #1B263B;
+  flex-shrink: 0;
 }
 
 .page-header {
@@ -78,6 +79,7 @@ span.code-snippet {
   padding-top: 40px;
   padding left: 0px;
   flex-direction: row;
+  flex-shrink: 0;
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: #415A77;
